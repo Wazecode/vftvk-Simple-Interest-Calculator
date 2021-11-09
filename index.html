@@ -1,16 +1,44 @@
+<!DOCTYPE html>
 <html>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="box">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <div class="normal"> 
+                <span class="amount">Amount</span> <input type="number"  id="principal">  <br/>
+            </div>
+            <div class="normal">
+                 <span class="Inter">Interest Rate</span>   <input type="range" min="0" max="250" value="100" class="slider" id="rate" onchange="show_value(this.value);">
+                 <span id="poop">10</span>%<br>
+            </div>
+            <div class="normal">
+                <span class="Inter">No. of Years</span> <select id="select"> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    
+                </select>
+            </div>    
 
-        <button onclick="compute()">Compute</button>
+            <button onclick="compute()">Compute Interest</button><br><br>
+            <span>If you deposit</span><span class="ans" id="principalO">100000</span><br>
+            <span>at an Interest rate of</span> <span class="ans" id="rateO">10</span><br>
+            <span>You will receive an amount of</span> <span class="ans" id="result"></span> <br>
+            <span>in the year </span> <span class="ans" id="year"></span>
+
+            <p>&#169 Everyone Can Get Rich</p>
+        </div>
     </body>
 </html>
